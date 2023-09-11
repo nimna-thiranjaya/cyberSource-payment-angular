@@ -7,7 +7,8 @@ import { environment } from 'src/environments/environment';
 })
 export class PaymentHelperService {
   private payment: any;
-  SECRET_KEY: string = environment.CYBERSOURCE.SECRET_KEY;
+  SECRET_KEY: string =
+    '0307759849da45ed888edf363363aa9685bdc02de713424cac3826e3bf8a2089a716c1fb24b64cacb24e2f0e344c7b47e5f03677f41c478a8fd2e4faf98a2c7a2a409d17d9264d6183f6ef13459c3fc0874c2181573448f99b9367fd280a17c65f4aa032027945eea33eee6135b55ec2e061f3030a5b4803bc58c3158e49dc9e';
   constructor() {}
 
   set setPaymentInformation(payment: any) {
@@ -22,8 +23,8 @@ export class PaymentHelperService {
     let signedFieldNames =
       'access_key,profile_id,transaction_uuid,signed_field_names,unsigned_field_names,signed_date_time,locale,transaction_type,reference_number,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code';
     let payment: any = {
-      access_key: environment.CYBERSOURCE.ACCESS_KEY,
-      profile_id: environment.CYBERSOURCE.PROFILE_ID,
+      access_key: 'a7c8045347d33447a4367559f46177c6',
+      profile_id: 'CCBEA78D-8382-4ADC-89E3-7E0FBCD30C03',
       signed_field_names: signedFieldNames,
       unsigned_field_names: 'card_type,card_number,card_expiry_date',
       locale: 'en',
